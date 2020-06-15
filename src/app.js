@@ -6,7 +6,9 @@ const forecast=require('./utils/forecast.js')
 console.log(__dirname)
 console.log(path.join(__dirname,'../public'))
 const app=express()
+
 //define path for express config
+const port=process.env.PORT || 3000
 const temp=path.join(__dirname,'../public')
 const viewpath=path.join(__dirname,'../templates/views')
 const partialpath=path.join(__dirname,'../templates/partials')
@@ -99,6 +101,6 @@ hbs.registerPartials(partialpath)
          name:'Naman'
      })
  })
-app.listen(3000,()=>{
-    console.log('server is up on port 3000')//tells that server is runnning
+app.listen(port,()=>{
+    console.log('server is up on port '+port)//tells that server is runnning
 })
