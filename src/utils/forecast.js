@@ -15,7 +15,7 @@ const forecast=(exactlocation,adderes,callback)=>{
         else
         {
             callback(undefined,{
-  forecast:'Current temprature is-'+(body.main.temp-273.15)+'deg '+' Humidity is-'+body.main.humidity+' Weather is-'+body.weather[0].main,
+  forecast:'Current temprature is-'+(body.main.temp)+'kelvin '+' Humidity is-'+body.main.humidity+' Weather is-'+body.weather[0].main,
                 // temp:body.main.temp-273.15+' Degree celcius',
                 // humidity:body.main.humidity,
                 // weather:body.weather[0].main
