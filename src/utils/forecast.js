@@ -1,8 +1,8 @@
 const request=require('request')
 
 
-const forecast=(exactlocation,adderes,callback)=>{
-    const url='https://api.openweathermap.org/data/2.5/weather?q='+adderes+'&APPID=d9f8d157ff42a3183bbc9249eee8b53e'
+const forecast=(exactlocation,callback)=>{
+    const url='https://api.openweathermap.org/data/2.5/weather?q='+exactlocation+'&APPID=d9f8d157ff42a3183bbc9249eee8b53e'
     request({url,json:true},(error,{body})=>{
         if(error)
         {

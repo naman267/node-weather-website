@@ -15,7 +15,7 @@ request({url,json:true},(error,{body})=>{
             callback(undefined,{
                 latitude:body.features[0].center[0],
                 longitude:body.features[0].center[1],
-                location:body.features[0].context[0].text,
+               // location:body.features[0].context[0].text,
                 exactlocation:body.features[0].place_name
    
    

@@ -48,7 +48,7 @@ hbs.registerPartials(partialpath)
          })
      }
      const address=req.query.address
-     geocode(address,(error,{location,exactlocation}={})=>{
+     geocode(address,(error,{exactlocation}={})=>{
          
        if(error)
         {  console.log(error)
@@ -56,7 +56,7 @@ hbs.registerPartials(partialpath)
                 error:error
             })
         }
-        forecast(exactlocation,location,(error,response)=>{
+        forecast(exactlocation,(error,response)=>{
             if(error)
             {
                 return res.send({
