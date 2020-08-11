@@ -1,9 +1,13 @@
 const request=require('request')
 
-
+ let body=undefined
 const forecast=(exactlocation,callback)=>{
     const url='https://api.openweathermap.org/data/2.5/weather?q='+exactlocation+'&APPID=d9f8d157ff42a3183bbc9249eee8b53e'
-    request({url,json:true},(error,{body})=>{
+    request({url,json:true},(error,response)=>{
+          if(response)
+          {
+              body=response.body
+          }
         if(error)
         {
             callback('Please Check Your Network Connection');
